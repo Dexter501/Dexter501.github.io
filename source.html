@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+            <style>.lw { font-size: 60px; }</style>
+        </head>
+        <body>
+            
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multiplication Skills Test</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    h1 {
+        color: #333;
+    }
+    form {
+        margin-top: 20px;
+    }
+</style>
+
+
+<h1>тест навики множиння</h1>
+<form id="quizForm">
+    <label for="question1"> 5 x 3?</label><br>
+    <input type="text" id="question1" name="question1"><br><br>
+    
+    <label for="question2">
+         7 x 8?</label><br>
+    <input type="text" id="question2" name="question2"><br><br>
+    
+    <label for="question3"> 4 x 9?</label><br>
+    <input type="text" id="question3" name="question3"><br><br>
+    
+    <label for="question4"> 6 x 5?</label><br>
+    <input type="text" id="question4" name="question4"><br><br>
+    
+    <label for="question5"> 12 x 3?</label><br>
+    <input type="text" id="question5" name="question5"><br><br>
+    
+    <input type="проверить" value="проверить">
+</form>
+
+<script>
+    document.getElementById("quizForm").onsubmit = function() {
+        let score = 0;
+        let answers = [
+            { question: "question1", answer: "15" },
+            { question: "question2", answer: "56" },
+            { question: "question3", answer: "36" },
+            { question: "question4", answer: "30" },
+            { question: "question5", answer: "36" }
+        ];
+
+        answers.forEach(item => {
+            let userAnswer = document.getElementById(item.question).value;
+            if (userAnswer === item.answer) {
+                score++;
+            }
+        });
+
+        alert("Your score is: " + score + "/5");
+
+        return false;
+    };
+</script>
+
+
+            <script>// Write JavaScript here</script>
+        
+    
+</body>
